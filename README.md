@@ -16,18 +16,17 @@
 1. **Clone the repository** (if applicable):
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/sfdcmarc/PageListenerLWC.git
+   cd PageListenerLWC
    ```
 
 2. **Add the component to your Salesforce org**:
 
 Use the Salesforce CLI or Developer Console to deploy the component.
 ```bash
-sfdx force:source:push
+sf force:source:push
 ```
 
-Ensure the Apex class FlexiPageMetadataService is deployed to your Salesforce org as it is required for metadata retrieval.
 
 ## Usage
 To use the PageListener component in your Lightning app or record page:
