@@ -29,7 +29,7 @@ sfdx force:source:push
 
 Ensure the Apex class FlexiPageMetadataService is deployed to your Salesforce org as it is required for metadata retrieval.
 
-**Usage**
+## Usage
 To use the PageListener component in your Lightning app or record page:
 
 **Included in a Lightning Record Page**
@@ -44,18 +44,20 @@ To use the PageListener component in your Lightning app or record page:
 - **objectApiName**: The API name of the object associated with the record.
 - **flexiPageName**: The developer name of the flexi page from which to retrieve metadata (optional, defaults to 'DefaultPageName').
 
-**Headless Usage**
+## Headless Usage
+
 The PageListener component can also be used in a headless manner within a Lightning Record Page. In this scenario, you do not need to wrap the component inside another LWC; simply include it directly on the record page.
 
-**Change Data Capture**
+## Change Data Capture
+
 The component listens for changes to the record data using [Change Data Capture](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_objects_change_data_capture.htm) (CDC). This allows it to react to updates and ensure the displayed information remains current. Make sure to configure CDC for the relevant objects in your Salesforce org.
 
-**Properties**
+## Properties
 - **recordId** (String): The ID of the Salesforce record to listen to.
 - **objectApiName** (String): The API name of the object (required).
 - **flexiPageName** (String): The developer name of the flexi page to retrieve metadata (optional).
 
-**Functionality**
+## Functionality
 - The component uses the @wire decorator to call the Apex method getFlexiPageMetadata to retrieve metadata based on the flexiPageName.
 - It extracts fields dynamically and stores them in the _fields property, which is reactive to changes.
 - The getRecord method from Lightning Data Service is used to retrieve record data based on the dynamic fields extracted from the flexi page.
@@ -68,15 +70,15 @@ The component listens for changes to the record data using [Change Data Capture]
 - **handleFlexiPageResponse**(String responseBody): Processes the response from the Tooling API and extracts the flexi page metadata.
 - **getObjects()**: Returns a list of accessible and creatable objects in the org.
 
-**Error Handling**
+## Error Handling
 Errors during metadata retrieval and JSON parsing are logged to the console to assist in troubleshooting.
 
-**Logging**
+## Logging
 The component includes console logging for debugging purposes. You can view logs for:
 - Reactive record ID and object API name.
 - Extracted fields from the flexi page metadata.
 - Wired record results.
 
 
-**License**
-This project is licensed under the [MIT License]().
+## License
+This project is licensed under the [MIT License](https://github.com/sfdcmarc/PageListenerLWC/blob/main/LICENSE).
