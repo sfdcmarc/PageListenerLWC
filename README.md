@@ -63,7 +63,8 @@ The component listens for changes to the record data using [Change Data Capture]
 - The getRecord method from Lightning Data Service is used to retrieve record data based on the dynamic fields extracted from the flexi page.
 - The component calls getRecordNotifyChange to notify the Lightning Data Service when the record has been updated.
 - Change Data Capture channels can be configured to ensure the component responds to updates in real-time.
-- Apex Class: `FlexiPageMetadataService`
+
+#### Apex Class: `FlexiPageMetadataService`
 - The component relies on the FlexiPageMetadataService Apex class, which provides methods to retrieve flexi page metadata and object information. Key methods include:
 
 - **getFlexiPageMetadata**(String developerName): Retrieves the metadata for a specified flexi page based on its developer name.
