@@ -40,15 +40,15 @@ To use the PageListener component in your Lightning app or record page:
 ```
 2. Set the necessary properties:
 
-- recordId: The ID of the record to monitor.
-- objectApiName: The API name of the object associated with the record.
-- flexiPageName: The developer name of the flexi page from which to retrieve metadata (optional, defaults to 'DefaultPageName').
+- **recordId**: The ID of the record to monitor.
+- **objectApiName**: The API name of the object associated with the record.
+- **flexiPageName**: The developer name of the flexi page from which to retrieve metadata (optional, defaults to 'DefaultPageName').
 
 **Headless Usage**
 The PageListener component can also be used in a headless manner within a Lightning Record Page. In this scenario, you do not need to wrap the component inside another LWC; simply include it directly on the record page.
 
 **Change Data Capture**
-The component listens for changes to the record data using Change Data Capture (CDC). This allows it to react to updates and ensure the displayed information remains current. Make sure to configure CDC for the relevant objects in your Salesforce org.
+The component listens for changes to the record data using [Change Data Capture](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_objects_change_data_capture.htm) (CDC). This allows it to react to updates and ensure the displayed information remains current. Make sure to configure CDC for the relevant objects in your Salesforce org.
 
 **Properties**
 - **recordId** (String): The ID of the Salesforce record to listen to.
